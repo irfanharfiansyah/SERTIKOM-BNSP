@@ -1,0 +1,42 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap&family=Anton&display=swapfamily=EB+Garamond:wght@500&family=Mulish:wght@300;400;600&family=Poppins:wght@300;400;600;700&display=swap');
+
+ #wrapper {
+    overflow-x: hidden;
+ }
+ body{
+   font-family: Poppins;
+ }
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.4rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 14rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+@media (min-width: 468px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+}
