@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\Letter;
-use Facade\FlareClient\Http\Response;
 class LetterController extends Controller
 
 {
@@ -35,10 +34,10 @@ class LetterController extends Controller
         return redirect('/');
     }
     public function delete($id) {
-        $letters = Letter::find($id); 
+        $letters = Letter::find($id);
+        unlink(public_path('storage/' .$letters->filename));
         $letters->delete();
-       
-        Alert::success('Succes Deleted', 'Success Message');
+        Alert::success('Success Deleted', 'Success Message');
         return redirect('/');
     }
     public function confirm($id){
