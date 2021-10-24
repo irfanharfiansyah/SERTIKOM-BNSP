@@ -23,28 +23,28 @@
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
-    <div class="bg-primary border-right" id="sidebar-wrapper">
+    <div class=" border-right" id="sidebar-wrapper" style="background-color: #15192F ">
        
-      <div class="sidebar-heading mb-2">
+      <div class="sidebar-heading ">
           <img src="https://lsptrainerindonesia.id/wp-content/uploads/2019/07/Logo-LSP-TI-png.png" alt="tungguu" width="100">
         </div>
-      <div class="list-group ">
-        <a href="/" class="list-group-item list-group-item-action bg-primary text-light"><i class="fas fa-cog"></i> Arsip </a>
-        <a href="/About" class="list-group-item list-group-item-action bg-primary text-light"><i class="fas fa-cog"></i> About</a>
+      <div class="list-group w-100">
+        <a href="/" class="list-group-item list-group-item-action" ><i class="fas fa-file-archive fa-fw" style="margin-right: 22px"></i>Arsip </a>
+        <a href="/about" class="list-group-item list-group-item-action" ><i class="fas fa-user-graduate fa-fw" style="margin-right: 15px"></i>  About </a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
-    <div id="page-content-wrapper" >
-      <div class="container-fluid mt-5">
-       @yield('content-tite')
-      <div class="container-fluid mt-5">
+    <div id="page-content-wrapper" style="background-color: #f8f7f5">
+      <div class="container mt-5 ">
+       @yield('content-title')
+      <div class="container">
         @yield('body')
       </div>
     </div>
   </div>
   
-
+  @include('sweetalert::alert')
 </body>
 </html>

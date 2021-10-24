@@ -9,21 +9,25 @@
  }
 
 #sidebar-wrapper {
-  min-height: 100vh;
-  margin-left: -15rem;
-  -webkit-transition: margin .25s ease-out;
-  -moz-transition: margin .25s ease-out;
-  -o-transition: margin .25s ease-out;
-  transition: margin .25s ease-out;
+  min-height: 120vh;
 }
 
 #sidebar-wrapper .sidebar-heading {
-  padding: 0.875rem 1.25rem;
-  font-size: 1.4rem;
+  padding: 1.875rem 4.25rem;
+  font-size: 1rem;
 }
 
 #sidebar-wrapper .list-group {
   width: 14rem;
+}
+.list-group-item{
+  background-color: #15192F;
+  color: rgb(201, 198, 194);
+  transition: all 0.3s ease-in;
+}
+.list-group-item:hover{
+  background-color: #FFCA2C;
+  transition: all 0.3s ease-in;
 }
 
 #page-content-wrapper {
@@ -40,3 +44,30 @@
     width: 100%;
   }
 }
+.table-list .row{
+  margin-top: 80px;
+}
+.table-list input[type=text]{
+    width:300px;
+    margin-left: -110px;
+  
+}
+
+th{
+  color: aliceblue;
+}
+
+tr{
+  background-color: rgb(121, 121, 121);
+}
+
+.list-arsip{
+  margin-left: 20px;
+}
+ h1{
+  font-weight: bold;
+}
+
+
+
+
