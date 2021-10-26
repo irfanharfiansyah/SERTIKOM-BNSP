@@ -17,6 +17,8 @@ use App\Http\Controllers\LetterController;
 
 Route::get('/', [LetterController::class, 'index']);
 Route::post('/addArsip/create', [LetterController::class, 'create']);
+Route::get('/editArsip/{id}', [LetterController::class, 'edit']);
+Route::post('/editArsip/update/{id}', [LetterController::class, 'update']);
 Route::get('/delete/{id}', [LetterController::class, 'delete']);
 Route::get('/delete/konfirmasi/{id}', [LetterController::class, 'confirm']);
 Route::get('/arsipView/{id}', [LetterController::class, 'show']);

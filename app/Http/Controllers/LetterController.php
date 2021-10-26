@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Models\Letter;
+use App\Models\Category;
 class LetterController extends Controller
 
 {
@@ -31,6 +32,25 @@ class LetterController extends Controller
             'filename' => $file
         ]);
         Alert::success('Success Added', 'Success Message');
+        return redirect('/');
+    }
+    public function edit($id){
+        $categories = Category::all();
+        $letters = Letter::find($id);
+        return view('layouts.editArsip', compact('letters', 'categories'));
+    }
+    public function update($id, Request $request){
+        $letters = Letter::find($id);
+        $letters->number = $request->number;
+        $letters->title = $request->title;
+        $letters->category_id = $request->category_id;
+        if ($letters->filename && file_exists(public_path('storage/' .$letters->filename))) {
+            unlink(public_path('storage/' .$letters->filename));
+        }
+        $file = $request->file('file')->store('file', 'public');
+        $letters->filename = $file;
+        $letters->save();
+        Alert::success('Success Updated', 'Success Message');
         return redirect('/');
     }
     public function delete($id) {

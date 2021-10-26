@@ -17,4 +17,5 @@
 </div>
 <a href="/" class="btn btn-dark mt-3 mb-4"><i class="fas fa-undo-alt"></i></a>
 <a href="/arsipView/download/{{ $letters->id }}" class="btn btn-warning mt-3 mb-4">Simpan File</a>
+<a href="/editArsip/{{ $letters->id }}" class="btn btn-secondary mt-3 mb-4">Edit</i></a>
 @endsection
