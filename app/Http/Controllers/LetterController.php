@@ -17,14 +17,14 @@ class LetterController extends Controller
         }else{
             $letters = Letter::all();
         }
-       return view('layouts.arsip', compact('letters', 'keyword'));
+        return view('layouts.arsip', compact('letters', 'keyword'));
     }
-
+    
     public function create(Request $request) {
         if ($request->file('file')) {
             $file = $request->file('file')->store('file', 'public');
         }
-
+        
         Letter::create([
             'number' => $request->number,
             'title' => $request->title,
@@ -62,8 +62,8 @@ class LetterController extends Controller
     }
     public function confirm($id){
         alert()->question('Are you sure?','You won\'t be able to revert this!')
-               ->showConfirmButton( '<a href="/delete/'. $id .'" class="text-white" style="text-decoration:none"> Yes! Delete it</a>', '#3085d6')->toHtml()
-               ->showCancelButton('Cancel', '#aaa')->reverseButtons();
+        ->showConfirmButton( '<a href="/delete/'. $id .'" class="text-white" style="text-decoration:none"> Yes! Delete it</a>', '#3085d6')->toHtml()
+        ->showCancelButton('Cancel', '#aaa')->reverseButtons();
         return redirect('/');
     }
     public function show($id){
@@ -76,3 +76,4 @@ class LetterController extends Controller
         return response()->download($path);
     }
 }
+

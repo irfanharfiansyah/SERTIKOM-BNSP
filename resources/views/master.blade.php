@@ -26,7 +26,7 @@
     <div class=" border-right" id="sidebar-wrapper" style="background-color: #15192F ">
        
       <div class="sidebar-heading ">
-          <img src="https://lsptrainerindonesia.id/wp-content/uploads/2019/07/Logo-LSP-TI-png.png" alt="tungguu" width="100">
+          <img src="https://cepagram.com/wp-content/uploads/2021/05/BNSP-Logo-edit-1.png" alt="tungguu" width="100">
         </div>
       <div class="list-group w-100">
         <a href="/" class="list-group-item list-group-item-action" ><i class="fas fa-file-archive fa-fw" style="margin-right: 22px"></i>Arsip </a>
